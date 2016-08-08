@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>colombian pizza</title>
+			<meta charset="utf-8">
+		<meta name="viewport" content="widht-device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="stilo.css">
+		 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="fonts.css">
+		<link rel="stylesheet"  href="style.css">
+		<script src="main.js"></script>
+	</head>
+	<body>
+		
+		<header>
+			<div class="cabezera">
+				
+				<img src="logo.png" class="logo">
+				<span class="inicio">
+				<a href="Colombian Pizza.html" class="icon-home">INICIO</a>
+				 </span>
+				 <span class="iniciar">
+
+<div class="container">
+ <form action="sesion.php" method="post" name="frm_sesion" id="frm_sesion">  
+  
+	<button id="boton1" type="button" class="icon-user" data-toggle="modal" data-target="#myModal1">INICIAR SESIÓN</button>
+
+
+	  <div class="modal fade" id="myModal1" role="dialog">
+							    <div class="modal-dialog">
+							    
+							      <div class="modal-content">
+							        <div class="modal-header">
+							          <button type="button" class="close" data-dismiss="modal">&times;</button>
+							          <from class="contact-from">
+							<ul>
+							<h1 class="front-resgister" > <strong>INICIAR SESIÓN</strong></h1>
+							<center>
+
+							    <label for="identificacion"><div align=center>Identificacion</label>
+							    <input type="identificacion"  class="form-control" name="id" id="id"
+							           placeholder="Introduce su Identificacion" required=”” />
+							 
+							  <br>
+							  <div class="form-group">
+							    <label for="ejemplo_password_1"><div align=center>Contraseña</label>
+							    <input type="password" class="form-control" name="ejemplo_password_1" id="ejemplo_password_1" 
+							           placeholder="Contraseña">
+							</div>
+							<br>
+							<div class="checkbox">
+							      <label>
+							        <input type="checkbox"> Olvide mi contraseña
+							      </label>
+							    </div>
+							    <br>
+
+							   <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
+							</center>
+
+							</from>
+							        </div>
+							        
+							        <div class="modal-footer">
+							          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							        </div>
+							      </div>
+							      
+							    </div>
+							  </div>
+ </form> 						  
+</div>
+
+				
+<div class="container">
+ <form action="registro.php" method="post" name="frm_registro" id="frm_registro"> 
+  <!-- Trigger the modal with a button -->
+  <button id="boton2" type="button" class="icon-clipboard" data-toggle="modal" data-target="#myModal">REGISTRAR</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <from class="contact-from">
+          
+	    <center><td><h1 class="front-resgister" > <strong>REGISTRAR</strong></h1></td></center>
+
+          	
+	    	<table>
+          <tr>
+          	<td id="roles">
+	          	<label for="roles">ROL</label>
+				<select class="form-control" name="roles" id="roles">
+				<option value="10">Usuario</option>
+				<option value="20">Administrador</option>
+				</select>
+			</td>
+		  </tr>
+          </table>
+	</div>
+
+
+<center>
+
+
+		
+
+	<div class="form-group">
+		<label for="tipodoc">Tipo de Documento</label>
+		<select class="form-control" name="Tipo_documento" id="Tipo_documento">
+			<option value="100">Cedula de Ciudadania</option>
+			<option value="200">Tarjeta de Identidad</option>
+			<option value="300">Cedula de Extranjeria</option>
+			<option value="400">NIT</option>
+		</select>
+	</div>
+<br>
+	<label for="identificacion">Nº De Identificacion</label>
+    <input type="identificacion"  class="form-control" name="id" id="id" 
+           placeholder="Ingrese su identificacion" required=”” />       
+<br>
+	<label for="nombre">Nombres</label>
+    <input type="nombre"  class="form-control" name="nombre" id="nombre"
+           placeholder="Ingrese su nombre" required=”” />
+<br>
+     <label for="apellido">Apellidos</label>
+     <input type="apellido" class="form-control" name="apellido" id="apellido"
+     		placeholder="Ingrese su apellido" required=”” />
+
+<br>
+    
+ 	
+    <label for="direccion">Dirección</label>
+    <input type="direccion"  class="form-control" name="direccion" id="direccion"
+           placeholder="Ingrese su direccion" required=”” />
+<br>
+    <label for="telefono">Telefono</label>
+    <input type="telefono"  class="form-control" name="telefono" id="telefono"
+           placeholder="Ingrese su telefono" required=”” />
+<br>   
+    <label for="celular">Celular</label>
+    <input type="celular"  class="form-control" name="celular" id="celular"
+           placeholder="Ingrese su celular" required=”” />
+<br>   
+    <label for="email">Correo Electronico</label>
+    <input type="email"  class="form-control" name="email" id="email"
+           placeholder="Ingrese su email" required=”” /> 
+
+<br>     
+  	<div class="form-group">
+    <label for="ejemplo_password1">Contraseña</label>
+    <input type="password" class="form-control" name="ejemplo_password1" id="ejemplo_password1" 
+           placeholder="Contraseña">
+	</div>
+	<br>
+	<div class="checkbox">
+	      <label>
+	        <input type="checkbox"> Olvide mi contraseña
+	      </label>
+	    </div>
+	    <br>
+
+	   <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+	</center>
+	</from>
+	        </div>
+	        
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	      
+	    </div>
+	  </div>
+  </form>
+</div>
+
+
+				 
+				 </span>
+				<div>
+					
+				</div>
+			</div>
+
+		</header>
+		<nav>
+			<div class="menu">
+				
+			</div>
+
+		</nav>
+
+		<div class="main">
+			<div class="slides">
+				<img src="pizza 1.jpg" alt="">
+				<img src="pizza_napolitana.jpg" alt="">
+				<img src="promocion1.png" alt="">
+				<img src="promocion2.png" alt="">
+			</div>
+		</div>
+		<div>
+			<li>
+				<a href="#">
+					<img src="1.jpg">
+
+				</a>
+			</li>			
+			<li>
+				<a href="#">
+					<img src="4.jpg">
+
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="3.jpg">
+
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="2.jpg">
+
+				</a>
+			</li>			
+		</div>
+
+
+
+
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.slides.js"></script>
+
+
+		<script>
+		$(function(){
+  $(".slides").slidesjs({
+    play: {
+      active: true,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "slide",
+        // [string] Can be either "slide" or "fade".
+      interval: 5000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: true,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: false,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    }
+  });
+	});
+	</script>
+	</body>
+</html>
+
