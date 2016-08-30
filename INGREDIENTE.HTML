@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>INGREDIENTE</title>
+		<link href='http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='../formValidation/css/formValidation.min.css' rel='stylesheet'>
+</head>
+
+<body>
+      <style > .alinearTexto
+     {
+      text-align: right;
+     }
+  </style>
+  <br>
+<div class="container-fluid">
+    <div class="row">
+      <form action="ingrediente.php" method="post" name="frm_registro" id="frm_registro"> 
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h1><center><strong>Ingrediente</strong></center></h1></div>
+            <br><br>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Codigo</label>
+              <div class="col-md-6">
+                <input class="form-control" name="codigo" id="codigo" 
+                placeholder="codigo" required="" />
+              </div>
+            </div>
+            <br><br>
+
+           <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Nombre</label>
+              <div class="col-md-6">
+                <input class="form-control" name="nombre" id="nombre" 
+                placeholder="Nombre" required="" />
+              </div>
+            </div>
+            <br><br>
+
+             <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Precio</label>
+              <div class="col-md-6">
+                <input class="form-control" name="precio" id="precio" 
+                placeholder="Precio" required="" />
+              </div>
+            </div>
+            <br><br>
+
+                 <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+
+        </div>   
+      </div>
+   </div>
+ </div>
+ </body>
+ </html>
+  

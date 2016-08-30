@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>inicio</title>
+   <meta charset="utf-8">
+    <link href='http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='../formValidation/css/formValidation.min.css' rel='stylesheet'>
+</head>
+ <body>
+      <style > .alinearTexto
+  {
+    text-align: right;
+  }
+  </style>
+  <br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <form action="inicio.php" method="post" name="frm_registro" id="frm_registro"> 
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+        <div class="panel-heading"><h1><center><strong>Login</strong></center></h1></div>
+        <br><br>
+
+        <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">E-mail</label>
+              <div class="col-md-6">
+                <input class="form-control" name="email" id="email" 
+                placeholder="E-mail" required="" />
+              </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Contraseña</label>
+              <div class="col-md-6">
+                <input class="form-control" name="contrasena" id="contasena" 
+                placeholder="Contraseña" required="" />
+              </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+            <div class="checkbox">
+                  <label class="col-md-8 control-label alinearTexto">
+                   <div class="col-md-12">
+                    <input type="checkbox"> Olvide mi contraseña
+                  </label>
+                  </div>
+                  </div>
+                <br>
+
+   <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
+
+
+
+</body>
+</html>

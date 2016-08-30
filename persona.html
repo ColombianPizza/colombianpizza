@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PERSONA</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+      <style > .alinearTexto
+	  {
+	    text-align: right;
+	  }
+  </style>
+   <br>
+<div class="container-fluid">
+    <div class="row">
+      <form action="persona.php" method="post" name="frm_registro" id="frm_registro"> 
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+        <div class="panel-heading"><h1><center><strong>Persona</strong></center></h1></div>
+        <br><br>
+
+        <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">N° de Identificacion</label>
+              <div class="col-md-6">
+                <input class="form-control" name="identificacion" id="identificacion" 
+                placeholder="Identificacion" required="" />
+              </div>
+            </div>
+            <br><br>
+
+        <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Tipo de documento</label>
+              <select class="form-control" name="tdocumento" id="tdocumento">
+				<option value="100">Cedula de Ciudadania</option>
+				<option value="200">Tarjeta de Identidad</option>
+				<option value="300">Cedula de Extranjeria</option>
+				<option value="400">NIT</option>
+				
+			</select>
+
+        </div>
+        <br><br>
+
+        
+
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Nombre</label>
+              <div class="col-md-6">
+                <input class="form-control" name="nombre" id="nombre" 
+                placeholder="Nombre" required="" />
+              </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Apellido</label>
+              <div class="col-md-6">
+                <input class="form-control" name="apellido" id="apellido" 
+                placeholder="Apellido" required="" />
+              </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Dirección</label>
+              <div class="col-md-6">
+                <input class="form-control" name="direccion" id="direccion" 
+                placeholder="Dirección" required="" />
+              </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Teléfono</label>
+              <div class="col-md-6">
+                <input class="form-control" name="telefono" id="telefono" 
+                placeholder="Teléfono" required="" />
+              </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Celular</label>
+              <div class="col-md-6">
+                <input class="form-control" name="celular" id="celular" 
+                placeholder="Celular" required="" />
+              </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">E-mail</label>
+              <div class="col-md-6">
+                <input class="form-control" name="email" id="email" 
+                placeholder="E-mail" required="" />
+              </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Contraseña</label>
+              <div class="col-md-6">
+                <input class="form-control" name="contrasena" id="contrasena" 
+                placeholder="Contraseña" required="" />
+              </div>
+            </div>
+            <br><br>
+
+
+	       <div class="checkbox col-md-8 control-label alinearTexto">
+		      <label>
+		        <input  type="checkbox"> Olvide mi contraseña
+		      </label>
+		    </div>
+		    <br>
+
+	   <button type="submit" class="btn btn-primary btn-lg btn-block ">Enviar</button>
+		        </div>
+	        
+	        
+	      </div>
+	      
+	    </div>
+	  </div>
+  </form>
+</div>
+</div>
+</body>
+</html>

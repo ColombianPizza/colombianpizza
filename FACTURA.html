@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Factura</title>
+		<link href='http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='../formValidation/css/formValidation.min.css' rel='stylesheet'>
+</head>
+<body>
+<style>
+  .alinearTexto
+  {
+    text-align: right;
+  }
+</style>
+<br>
+<div class="container-fluid">
+    <div class="row">
+      <form action="factura.php" method="post" name="frm_registro" id="frm_registro"> 
+      <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+      <div class="panel-heading"><h1><center><strong>Factura</strong></center></h1></div>
+        <br>
+        <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">No Factura</label>
+              <div class="col-md-6">
+                <input class="form-control" name="Nofactura" id="Nofactura" 
+                placeholder="No.factura" required="" />
+              </div>
+            </div>
+            <br>
+            <br>
+        <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Iva</label>
+              <div class="col-md-6">
+                <input class="form-control" name="iva" id="iva" 
+                placeholder="IVA" required="" />
+              </div>
+            </div>
+            <br>
+            <br>      
+        <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Sub total</label>
+              <div class="col-md-6">
+                <input class="form-control" name="subtotal" id="subtotal" 
+                placeholder="Sub total" required="" />
+              </div>
+            </div>
+            <br>
+            <br>      
+        <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Total</label>
+              <div class="col-md-6">
+                <input class="form-control" name="total" id="total" 
+                placeholder="Total" required="" />
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="form-group">
+              <label class="col-md-4 control-label alinearTexto">Fecha</label>
+              <div class="col-md-6">
+                <input class="form-control" name="fecha" id="fecha" 
+                placeholder="AAAA/MM/DD" required="" />
+              </div>
+            </div>
+            <br>
+            <br>   
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+      </div>  
+      </div>
+    </form>  
+    </div>
+  </div>            
+  </body>
+</html>
+
