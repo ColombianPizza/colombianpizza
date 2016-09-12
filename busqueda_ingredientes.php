@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="es">
 <head>
   <title>datos</title>
   <meta charset="utf-8">
@@ -14,6 +14,7 @@
  <script src="js/responsive-nav.js" type="text/javascript"></script>
  <script src="js/owl.carousel.js" type="text/javascript"></script>
  <script type="text/javascript">
+ 
 
 </script>
  </head>
@@ -24,9 +25,8 @@
 
 	$user_id=null;
 
-		$sql1= "SELECT `factura`.`factura`, `factura`.`iva_productos`, `factura`.`total_factura`, `factura`.`subtotal_producto`, `factura`.`fecha_facturacion`, `persona`.`nombre`
-			FROM `factura`
-			LEFT JOIN `persona` ON `factura`.`Persona_idpersona` = `persona`.`idpersona` ";
+		$sql1= "SELECT `ingredientes`.`idingredientes`, `ingredientes`.`nombre_ingrediente`, `ingredientes`.`precio_ingrediente` FROM `ingredientes`
+		WHERE `ingredientes`.`idingredientes` IS NOT NULL";
 	
 $query = $con->query($sql1);
 ?>
@@ -34,16 +34,14 @@ $query = $con->query($sql1);
 <?php if($query->num_rows>0):?>
 
 <br><br>
-<a href="../FORM_USER.php"><button class="btn btn-primary">Agregar Factura</button></a>
+<a href="../INGREDIENTE.HTML"><button class="btn btn-primary">Agregar Ingrediente</button></a>
 <br><br><br>
 <table border="1px" width="80px" class="table">
 <thead>
-					<td><b>Nº Factura</b></td>
-					<td><b>Iva</b></td>
-					<td><b>Sub Total</b></td>
-					<td><b>Total</b></td>
-					<td><b>Fecha</b></td>
-					<td><b>Cliente</b></td>
+					<td><b>Codigo del Ingrediente</b></td>
+					<td><b>Nombre del Ingrediente</b></td>
+					<td><b>Precio del Ingrediente</b></td>
+					
 					
 </thead>
 
@@ -51,14 +49,11 @@ $query = $con->query($sql1);
 <?php while ($r=$query->fetch_array()):?>
 
 <tr>
-	<td><?php echo $r["factura"]; ?> </td> 	
-	<td><?php echo $r["iva_productos"]; ?> </td>
-	<td><?php echo $r["subtotal_producto"]; ?> </td> 	 	
-	<td><?php echo $r["total_factura"]; ?> </td>
-	<td><?php echo $r["fecha_facturacion"]; ?> </td>
-	<td><?php echo $r["nombre"]; ?> </td>
+	<td><?php echo $r["idingredientes"]; ?> </td> 	
+	<td><?php echo $r["nombre_ingrediente"]; ?> </td>
+	<td><?php echo $r["precio_ingrediente"]; ?> </td> 	 	
 	<td><a href=" "><button type="submit" class="btn btn-success">Editar</button></td>
-	<td><a href="eliminar_factura.php?factura=<?php echo $r["factura"];?> " class="btn btn-warning" onclick="return confirm('Esta seguro de eliminar')">Elimiar</a></td>
+	<td><a href="eliminar_ingredientes.php?idingredientes=<?php echo $r["idingredientes"];?> " class="btn btn-warning" onclick="return confirm('Esta seguro de eliminar')">Elimiar</a></td>
 	
 </tr>
 

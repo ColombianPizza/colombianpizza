@@ -32,6 +32,7 @@ $query = $con->query($sql1);
 ?>
 
 <?php if($query->num_rows>0):?>
+	
 <br><br>
 <a href="../persona.html"><button class="btn btn-primary">Agregar Usuario</button></a>
 <br><br><br>
@@ -59,8 +60,10 @@ $query = $con->query($sql1);
 	<td><?php echo $r["celular"]; ?> </td>
 	<td><?php echo $r["email"]; ?> </td>
 	<td><?php echo $r["password"]; ?> </td>
+	
+
 	<td><a href=" "><button type="submit" class="btn btn-success">Editar</button></td>
-	<td><a href=" "><button type="submit" class="btn btn-warning">Elimiar</button></td>
+	<td><a href="eliminar_persona.php?idpersona=<?php echo $r["idpersona"];?> " class="btn btn-warning" onclick="return confirm('Esta seguro de eliminar')">Elimiar</a></td>
 	
 </tr>
 

@@ -24,9 +24,8 @@
 
 	$user_id=null;
 
-		$sql1= "SELECT `factura`.`factura`, `factura`.`iva_productos`, `factura`.`total_factura`, `factura`.`subtotal_producto`, `factura`.`fecha_facturacion`, `persona`.`nombre`
-			FROM `factura`
-			LEFT JOIN `persona` ON `factura`.`Persona_idpersona` = `persona`.`idpersona` ";
+		$sql1= "SELECT `productos`.`codigo_productos`, `productos`.`valor_productos`, `productos`.`detalle_productos` FROM `productos`
+		WHERE `productos`.`codigo_productos` IS NOT NULL";
 	
 $query = $con->query($sql1);
 ?>
@@ -34,16 +33,14 @@ $query = $con->query($sql1);
 <?php if($query->num_rows>0):?>
 
 <br><br>
-<a href="../FORM_USER.php"><button class="btn btn-primary">Agregar Factura</button></a>
+<a href="../producto.HTML"><button class="btn btn-primary">Agregar Producto</button></a>
 <br><br><br>
 <table border="1px" width="80px" class="table">
 <thead>
-					<td><b>Nº Factura</b></td>
-					<td><b>Iva</b></td>
-					<td><b>Sub Total</b></td>
-					<td><b>Total</b></td>
-					<td><b>Fecha</b></td>
-					<td><b>Cliente</b></td>
+					<td><b>Codigo del Producto</b></td>
+					<td><b>Nombre del Producto</b></td>
+					<td><b>Precio del Producto</b></td>
+					
 					
 </thead>
 
@@ -51,14 +48,11 @@ $query = $con->query($sql1);
 <?php while ($r=$query->fetch_array()):?>
 
 <tr>
-	<td><?php echo $r["factura"]; ?> </td> 	
-	<td><?php echo $r["iva_productos"]; ?> </td>
-	<td><?php echo $r["subtotal_producto"]; ?> </td> 	 	
-	<td><?php echo $r["total_factura"]; ?> </td>
-	<td><?php echo $r["fecha_facturacion"]; ?> </td>
-	<td><?php echo $r["nombre"]; ?> </td>
+	<td><?php echo $r["codigo_productos"]; ?> </td> 	
+	<td><?php echo $r["detalle_productos"]; ?> </td>
+	<td><?php echo $r["valor_productos"]; ?> </td> 	 	
 	<td><a href=" "><button type="submit" class="btn btn-success">Editar</button></td>
-	<td><a href="eliminar_factura.php?factura=<?php echo $r["factura"];?> " class="btn btn-warning" onclick="return confirm('Esta seguro de eliminar')">Elimiar</a></td>
+	<td><a href="eliminar_producto.php?codigo_productos=<?php echo $r["codigo_productos"];?> " class="btn btn-warning" onclick="return confirm('Esta seguro de eliminar')">Elimiar</a></td>
 	
 </tr>
 
